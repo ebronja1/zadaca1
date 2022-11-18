@@ -34,7 +34,7 @@ class ExpressionEvaluatorTest {
      */
     @Test
     void evalute2() {
-        String s = "( sqrt 4 )";
+        String s = "( sqrt ( 4 ) )";
         ExpressionEvaluator e = new ExpressionEvaluator();
         assertEquals(2, e.evaluate(s));
     }

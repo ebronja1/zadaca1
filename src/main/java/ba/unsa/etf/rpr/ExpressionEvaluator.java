@@ -55,6 +55,12 @@ public class ExpressionEvaluator {
                     brojac++;
                 }
                 vals.push(Double.parseDouble(s.substring(i - brojac, i)));
+                Character c1 = ' ';
+                if (!ops.empty()) {
+                    c1 = ops.pop();
+                    ops.push(c1);
+                }
+                if (c1.equals('s')) i++;
             }
             }
         return vals.pop();
